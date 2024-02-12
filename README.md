@@ -42,8 +42,8 @@ If you need to train on ImageNet-16-120, please refer to the GitHub repo of [NAS
 
 ## Usage
 1. Find the base maximal learning rate of the shallow version of your target model (by reducing the number of hidden layers to 1: "input_layer->hidden_layer->output_layer")
-2. Initialize your target network (of deeper layers or different topologies) according to our equation 4 (see our example for [MLPs](), [CNNs](), and [architectures with complicated graph topologies]()).
-3. Train your target network by scaling the learning rate based on equation 8 for MLPs or equation 9 for CNNs (see our [scaling rule]()).
+2. Initialize your target network (of deeper layers or different topologies) according to our equation 4 (see our example for [MLPs](https://github.com/chenwydj/principled_scaling_lr_init/blob/main/models/mlp_dags.py#L108), [CNNs](https://github.com/chenwydj/principled_scaling_lr_init/blob/main/models/cnn_dags.py#L101), and [architectures with complicated graph topologies](https://github.com/chenwydj/principled_scaling_lr_init/blob/main/models/cells.py#L32)).
+3. Train your target network by scaling the learning rate based on equation 8 for MLPs or equation 9 for CNNs (see our [scaling rule](https://github.com/chenwydj/principled_scaling_lr_init/blob/main/main.py#L70) by calculating [paths of an architecture's graph topology](https://github.com/chenwydj/principled_scaling_lr_init/blob/main/dag_utils.py#L35)).
 
 
 ```bash
