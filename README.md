@@ -30,8 +30,8 @@ This repository has been tested on RTX A6000. Configurations may need to be chan
 ## Installation
 * Clone this repo:
 ```bash
-git clone https://github.com/chenwydj/principled_hp_scaling.git
-cd principled_hp_scaling
+git clone https://github.com/chenwydj/principled_scaling_lr_init.git
+cd principled_scaling_lr_init
 ```
 * Install dependencies:
 ```bash
